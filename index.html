@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      console.info(' -- sending message');
+
+      var backEvent = new window.CustomEvent("WebChannelMessageToChrome", {
+        detail: {
+          id: "loop-link-clicker",
+          message: {
+            command: "closeTab"
+          }
+        }
+      });
+      window.dispatchEvent(backEvent);
+
+    </script>
+    <p>Hello World</p>
+  </body>
+</html>
